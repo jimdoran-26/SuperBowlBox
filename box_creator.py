@@ -5,7 +5,8 @@ import sys
 def print_row():
     final=''
     for i in range(10):
-        final+= '     |    ' + str(a[i])
+        final+= '     |       ' + str(a[i])
+    return final
 
 def print_block(z):
     final=''
@@ -65,7 +66,6 @@ for key,value in vals.items():
 random.shuffle(total_names)
 final_names = [total_names[i*10:(i+1)*10] for i in range((100+10-1)//10)]
 
-###PRINT THE FINAL BOX
 a,b,c=list(range(10)),list(range(10)),list(range(10))
 random.shuffle(a),random.shuffle(b)
 
@@ -74,6 +74,7 @@ bucs='BUCCANEERS'
 j=0
 store = '              '
 
+###PRINT THE FINAL BOX
 print('                                                                     CHIEFS                                                                    ')
 print(print_row())
 print(print_line())
