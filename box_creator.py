@@ -5,6 +5,24 @@ import sys
 names={}
 total =0
 
+def print_row():
+    final=''
+    for i in range(10):
+        final+= '     |    ' + str(a[i])
+
+def print_block(z):
+    final=''
+    for n in range(10):
+        if n!=9:
+            final+= final_names[z][b[n]] + store[0:(len(store)-1-len(final_names[z][b[n]]))]+ '|'
+        else:
+            final+= final_names[z][b[n]]
+    #return final_names[z][b[n]] + store[0:(len(store)-1-len(final_names[z][b[n]]))]+ '|'
+    return final
+
+def print_line():
+    return ('   --|-------------|-------------|-------------|-------------|-------------|-------------|-------------|-------------|-------------|-------------')
+
 try:
     name = input('Person Name: ')
     boxes = int(input('# Boxes: '))
@@ -57,16 +75,15 @@ j=0
 store = '              '
 
 print('                                                                     CHIEFS                                                                    ')
-print('     |    ' + str(a[0]) + '        |      ' + str(a[1]) + '      |      ' + str(a[2]) + '      |      ' + str(a[3]) + '      |      ' + str(a[4]) + '      |      ' + str(a[5]) + '      |      ' + str(a[6]) + '      |      ' + str(a[7]) + '      |      ' + str(a[8]) + '      |      ' + str(a[9]) + '           ')
-print('   --|-------------|-------------|-------------|-------------|-------------|-------------|-------------|-------------|-------------|---------')
-
+print(print_row())
+print(print_line())
 
 for i in c:
     if 1<i<7:
-        print(bucs[j]+'  '+str(a[i])+' ' + '|' + final_names[i][b[0]]+store[0:(len(store)-1-len(final_names[i][b[0]]))] + '|' + final_names[i][b[1]]+store[0:(len(store)-1-len(final_names[i][b[1]]))] + '|' + final_names[i][b[2]]+store[0:(len(store)-1-len(final_names[i][b[2]]))] + '|' + final_names[i][b[3]]+store[0:(len(store)-1-len(final_names[i][b[3]]))] + '|' + final_names[i][b[4]]+store[0:(len(store)-1-len(final_names[i][b[4]]))] + '|' + final_names[i][b[5]]+store[0:(len(store)-1-len(final_names[i][b[5]]))] + '|' + final_names[i][b[6]]+store[0:(len(store)-1-len(final_names[i][b[6]]))] + '|' + final_names[i][b[7]]+store[0:(len(store)-1-len(final_names[i][b[7]]))] + '|' + final_names[i][b[8]]+store[0:(len(store)-1-len(final_names[i][b[8]]))] + '|' + final_names[i][b[9]])
+        print(bucs[j]+'  '+str(a[i])+' ' + '|' + '  ' + print_block(i))
         j+=1
-        print(bucs[j]+ '  --|-------------|-------------|-------------|-------------|-------------|-------------|-------------|-------------|-------------|---------')
+        print(bucs[j]+ print_line()[1:])
         j+=1
     else:
-        print('   '+str(a[i])+' ' + '|' + final_names[i][b[0]]+store[0:(len(store)-1-len(final_names[i][b[0]]))] + '|' + final_names[i][b[1]]+store[0:(len(store)-1-len(final_names[i][b[1]]))] + '|' + final_names[i][b[2]]+store[0:(len(store)-1-len(final_names[i][b[2]]))] + '|' + final_names[i][b[3]]+store[0:(len(store)-1-len(final_names[i][b[3]]))] + '|' + final_names[i][b[4]]+store[0:(len(store)-1-len(final_names[i][b[4]]))] + '|' + final_names[i][b[5]]+store[0:(len(store)-1-len(final_names[i][b[5]]))] + '|' + final_names[i][b[6]]+store[0:(len(store)-1-len(final_names[i][b[6]]))] + '|' + final_names[i][b[7]]+store[0:(len(store)-1-len(final_names[i][b[7]]))] + '|' + final_names[i][b[8]]+store[0:(len(store)-1-len(final_names[i][b[8]]))] + '|' + final_names[i][b[9]])
-        print('   --|-------------|-------------|-------------|-------------|-------------|-------------|-------------|-------------|-------------|---------')
+        print('   '+str(a[i])+' ' + '|' + '  ' + print_block(i))
+        print(print_line())
