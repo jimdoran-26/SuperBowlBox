@@ -1,10 +1,7 @@
 import random
 import sys
 
-###GENERATE THE LIST OF NAMES ALONG WITH CORRESPONDING NUMBER OF BOXES THEY ARE BUYING
-names={}
-total =0
-
+###FUNCTIONS DESIGNED TO MAKE PRINTING OF FINAL TABLE EASIER
 def print_row():
     final=''
     for i in range(10):
@@ -17,8 +14,11 @@ def print_block(z):
             final+= final_names[z][b[n]] + store[0:(len(store)-1-len(final_names[z][b[n]]))]+ '|'
         else:
             final+= final_names[z][b[n]]
-    #return final_names[z][b[n]] + store[0:(len(store)-1-len(final_names[z][b[n]]))]+ '|'
     return final
+
+###GENERATE THE LIST OF NAMES ALONG WITH CORRESPONDING NUMBER OF BOXES THEY ARE BUYING
+names={}
+total =0
 
 def print_line():
     return ('   --|-------------|-------------|-------------|-------------|-------------|-------------|-------------|-------------|-------------|-------------')
