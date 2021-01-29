@@ -81,10 +81,10 @@ print(print_line())
 
 for i in c:
     if 1<i<7:
-        print(bucs[j]+'  '+str(a[i])+' ' + '|' + '  ' + print_block(i))
+        print(bucs[j]+'  '+str(a[i])+' ' + '|' + '' + print_block(i))
         j+=1
         print(bucs[j]+ print_line()[1:])
         j+=1
     else:
-        print('   '+str(a[i])+' ' + '|' + '  ' + print_block(i))
+        print('   '+str(a[i])+' ' + '|' + '' + print_block(i))
         print(print_line())
