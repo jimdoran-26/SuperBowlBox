@@ -83,10 +83,10 @@ print(print_line())
 
 for i in c:
     if 1<i<7:
-        print(bucs[j]+'  '+str(random_a[i])+' ' + '|' + '' + print_row(i))
+        print(bucs[j]+'  '+str(random_b[i])+' ' + '|' + '' + print_row(i))
         j+=1
         print(bucs[j]+ print_line()[1:])
         j+=1
     else:
-        print('   '+str(random_a[i])+' ' + '|' + '' + print_row(i))
+        print('   '+str(random_b[i])+' ' + '|' + '' + print_row(i))
         print(print_line())
