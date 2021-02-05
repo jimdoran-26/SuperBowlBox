@@ -1,4 +1,5 @@
-from random import sample
+import random
+from random import sample, shuffle
 import sys
 
 ###FUNCTIONS TO MAKE PRINTING OF FINAL TABLE EASIER
@@ -65,7 +66,8 @@ for key,value in vals.items():
         total_names.append(key)
 
 ###SHUFFLE THE LIST SO THAT IT IS RANDOM ORDER
-total_names=sample(total_names,len(total_names))
+for i in range(10):
+    random.shuffle(total_names)
 final_names = [total_names[i*10:(i+1)*10] for i in range((100+10-1)//10)]
 
 random_a,random_b,c=sample(range(10),10),sample(range(10),10),list(range(10))
